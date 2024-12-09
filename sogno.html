@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<link rel="stylesheet" href="stylesn.css">
+<head class="sogno">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ore di Sonno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 7px 13px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            position: absolute;
+            left: 20%;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+
+
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="sogno">
+    <h1>SELEZIONA: quante ore desideri riposare?</h1>
+    <select id="sleep-hours">
+        <option value="1">1 ora</option>
+        <option value="2">2 ore</option>
+        <option value="3">3 ore</option>
+        <option value="4">4 ore</option>
+        <option value="5">5 ore</option>
+    </select>
+    <button class= "conferma" onclick="showMessage()">Conferma</button>
+    <div id="result"></div>
+
+    <script>
+        function showMessage() {
+            const hours = document.getElementById("sleep-hours").value;
+            let message;
+
+            switch (hours) {
+                case "1":
+                    message = "cerco di arrivare a Parigi in macchina ma c'è traffico e al posto di guidare metto solo le frecce. Arrivo in Costa Azzurra e devo passare con la macchina attraverso una spiaggia di sabbia viola, da un lato ho il mare e dall'altro la linea delle montagne che però hanno delle forme molto morbide, sempre viola. Arrivo ad un hotel in mezzo ad un bosco ma non c'è nessuno, faccio qualche giretto e poi voglio andarmene, ma mi rendo conto che è vietato: fuori dall'hotel c'è chi prova a fermare un taxi da anni. può uscire solo chi ha sufficienti gettoni da mettere negli ingranaggi del cancello per farlo aprire";
+                    break;
+                case "2":
+                    message = "sto per cadere da un balcone, ma mi risveglio a casa di elisa e mi metto a dormire nel suo letto, mentre lei studia matematica tutta la notte per un esame. Ha la schiena coperta di bigliettini. Quando mi sveglio a colazione c'è anche sofi, che con aria annoiata mi dice: non mi dire che hai sognato di nuovo di cadere dal balcone.............";
+                    break;
+                case "3":
+                    message = "sono seduta sul divano a casa di lorenzo, improvvisamente cristiano urla: no ferme.....non ci credo....dall'11 al 13 aprile all'anteo....non avete capito,,,,c'è il festival internazionale contro le mafie!! (...sipario)";
+                    break;
+                case "4":
+                    message = "inizia a sanguinarmi il naso e sento delle voci che dicono che devo smetterla, rimango ferma sul divano per qualche minuto e mi addormento. al mio risveglio qualcuno ha cucinato un dolce";
+                    break;
+                case "5":
+                    message = "ambientazione 2010-2011. torno da tennis tutta bagnata perchè ho corso tra gli irrigatori, cristina mi viene incontro con un asciugamano grande e dice che devo decidere dove abiterò da grande e che devo andare da un notaio, iniziano a farmi male i denti e vedo tutto nero e grigio, penso che sicuramente deve essere dovuto al fatto che.....non lo so, non capisco a cosa sia dovuto, è un'idea vaga. cristina si avvicina per darmi un bacio e io cerco di scappare, ma non ho le forze e rimango immobile ";
+                    break;
+                default:
+                    message = "Scegli un numero valido.";
+            }
+
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+</body>
+</html>
